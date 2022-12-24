@@ -31,7 +31,7 @@ function render(){
       user = [];
 
   const trendPromise = fetch('trend.json').then(res=>res.json())
-  const userPromise = fetch('Twitter_Tweets.json').then(res=>res.json())
+  const userPromise = fetch('Twitter_All.json').then(res=>res.json())
 
   Promise.all([trendPromise,userPromise]).then(values => {
     const data1 = values[0]
