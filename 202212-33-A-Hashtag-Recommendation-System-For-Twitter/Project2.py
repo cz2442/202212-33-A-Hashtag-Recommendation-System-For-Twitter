@@ -77,6 +77,13 @@ def Twitter_mentions(userid, Token):
         with open("Twitter_Mentions.json", "w") as f:
             json.dump(jsonf, f, indent = 3)
 
+        with open("Twitter_Tweets.json") as f:
+            tweets = json.load(f)
+        for i in tweets:
+            jsonf.append(i)
+        with open("Twitter_All.json", "w") as f:
+            json.dump(jsonf, f, indent = 3)
+
 def create_url(userid):
     # Replace with user ID below
     user_id = userid
